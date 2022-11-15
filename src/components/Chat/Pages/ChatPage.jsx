@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { loginOut } from '../Redux/AuthOperations';
 import { getChat } from '../Redux/ChatOperations';
+import { ChatForm } from '../components/ChatForm/ChatForm';
+import { ChatList } from '../components/ChatList/ChatList';
 
 const ChatPage = ({ userName, chatLogOut }) => {
   const distpatch = useDispatch();
@@ -16,6 +18,8 @@ const ChatPage = ({ userName, chatLogOut }) => {
       <Button variant="primary" onClick={chatLogOut}>
         Log Out
       </Button>
+      <ChatList />
+      <ChatForm />
     </>
   );
 };
