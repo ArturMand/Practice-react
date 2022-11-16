@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import { googleAuth, loginOut } from './AuthOperations';
 
 const handelAuth = (state, { payload }) => {
-  console.log(state);
   if (payload) {
     state.user = payload;
     state.isLogIn = true;
